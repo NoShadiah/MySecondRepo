@@ -1,0 +1,113 @@
+/* Below, i am importing a url , linking to the google font called Roboto so that i can use it as the font for my site */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* resetting the HTML default styles. The asteric selector that is used below selects all the HTML tags in my page*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* setting the font family to roboto, and used sans-serif as a fall-back incase roboto is not available */
+body{
+    font-family: 'Roboto', sans-serif
+}
+/* header section */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+}
+/* Setting the height of the main section */
+main{
+    height: calc(100vh - 70px); 
+    /* i set the heightof the main section to calc( 100vh - 70px) V stands for a viewport, which is the visible part of a window’s screen without scrolling. “height” means vertical length, and we can also use “w” which means width - horizontal length.  */ */
+    display: flex;
+    background-color: #f9f9f9;
+}
+/* Hiding the scroll-bar with overflow-y */
+.side-bar{
+    height:100%; 
+    /* set the height of the side-bar to 100%  and width to 17% of its parent */
+    width:17%;
+    background-color: white;
+    overflow-y: hidden;
+}
+/* Adding media Querries for responsiveness on any device, if the screen is less than the max-width, the
+side-bar will disappear.*/
+@media (max-width: 768px) {
+    .side-bar{
+        display: none
+    }
+}
+/* layout of the clone is done */
+
+/* styling the header */
+/* left section */
+.left{
+    display:flex;
+    align-items:center;
+}
+.left #menu{
+    padding: 0 7px;
+    cursor: pointer;
+}
+/* search */
+.search{
+    display: flex;
+}
+.search form{
+    display: flex;
+    border: 1px solid #ddd;
+    height:45px;
+}
+/* styling the input in the search form */
+.search input{
+    width: 600px;
+    padding: 10px;
+    border:0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+}
+input:focus{
+    outline: none;
+    border: 1px solid #ddd;
+}
+/* Style the search and mic icons/buttons */
+.search button{
+    height: 100%;
+    width: 60px;
+    border: none;
+}
+.mic{
+    margin-top: 10px;
+}
+/* .material-icons{
+    color: rgb(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+/* } */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
